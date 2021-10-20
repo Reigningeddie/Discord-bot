@@ -34,8 +34,8 @@ client.on('message', async (msg) => {
       // shows msg in console 🔽
       console.log('Bing Bong! msg sent!');
     }
-
-    let regex = /^\!8ball\s.+/i;
+    //if someone gives command of "!8boll " then you get a reply from the eightball array
+    let regex = /^\!8bot\s.+/i;
     if (regex.exec(msg.content)) {
       const i = Math.floor(Math.random()*eightBall.length);
       const reply = eightBall[i];
